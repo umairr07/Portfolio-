@@ -14,7 +14,7 @@ const Skills = () => {
   return (
     <div>
       <div className="p-10 h-screen w-full">
-        <p className="font-bold text-3xl text-center mb-20 ">SKILLS</p>
+        <p className="font-bold text-3xl text-center mb-10">SKILLS</p>
         <div className="p-2 flex flex-wrap justify-center gap-10">
           <Card title="HTML" href="#" Icon={ImHtmlFive2} image={HTML_URL} />
           <Card title="CSS" href="#" Icon={SiCss3} image={CSS_URL} />
