@@ -1,16 +1,18 @@
 import uLogo from "../../photos/new-u-logo.png";
 import "./About.css";
+import myResume from "../../assets/UmerShaikh.pdf";
 
 function About() {
+  const openResume = () => {
+    window.open(myResume, "_blank");
+  };
+
   return (
-    <div
-      className="flex justify-center gap-8  items-center h-[90vh]"
-      id="about"
-    >
+    <div className="flex justify-center gap-8 items-center h-[90vh]" id="about">
       <div className="flex flex-col gap-5 ">
         <div className="flex items-center gap-3">
           <p className="text-[#fff] font-extrabold text-5xl">Hello! I'm </p>
-          <p className="text-[#FFBD39] font-extrabold text-5xl">Umair Shaikh</p>
+          <p className="text-[#FFBD39] font-extrabold text-5xl">Umer Shaikh</p>
         </div>
 
         <div>
@@ -30,7 +32,7 @@ function About() {
             <span className="absolute top-0 left-0 w-full bg-green-500 duration-500 delay-300 group-hover:-translate-y-full h-full"></span>
             <span className="absolute delay-300 top-0 left-0 w-full bg-green-500 duration-500 group-hover:translate-y-full h-full"></span>
           </button> */}
-          <button className="button" type="button">
+          <button className="button" type="button" onClick={openResume}>
             <span className="button__text">Download CV</span>
             <span className="button__icon">
               <svg

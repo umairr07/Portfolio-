@@ -1,7 +1,10 @@
 import "./Footer.css";
 function Footer() {
   return (
-    <div className="flex flex-col gap-4 justify-center items-center h-screen">
+    <div
+      className="flex flex-col gap-4 justify-center items-center h-screen"
+      id="footer"
+    >
       <div className="flex justify-center items-center">
         <h1 className="text-3xl italic font-bold">
           Thank You for Visiting!! 😇

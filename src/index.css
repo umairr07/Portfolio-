@@ -1,25 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* @import url("https://fonts.googleapis.com/css2?  family=Montserrat:ital,wght@0,100;0,200;1,100;1,200&display=swap"); */
-
-/* body {
-  font-family: "Montserrat", sans-serif;
-} */
-
-/* @import "@fontsource/alegreya-sans";
-@import "@fontsource/alegreya-sans/400.css";
-@import "@fontsource/alegreya-sans/400-italic.css";
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  font-family: "Alegreya Sans";
-} */
-/* 
-@import "@fontsource/league-spartan";
-@import "@fontsource/league-spartan/400.css";
-@import "@fontsource/league-spartan/400-italic.css";
-
-body {
-  font-family: "League Spartan";
-} */
+  font-family: "Inter", sans-serif;
+}

@@ -3,7 +3,6 @@ import resume from "../../photos/resume.png";
 import googledrive from "../../photos/googleDrive.png";
 import pix from "../../photos/pix.png";
 import geekFoody from "../../photos/geekfoods.png";
-import "./Projects.css";
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
 import {
@@ -16,6 +15,8 @@ import {
   REACT_URL,
   TAILWIND_URL,
 } from "../../constants/url";
+
+import "./Projects.css";
 
 const projects = [
   {
@@ -63,7 +64,9 @@ function Projects() {
   const [myProjects, setMyProjects] = useState(projects);
   return (
     <>
-      <h1 className="font-bold text-3xl text-center mb-10 ">PROJECTS</h1>
+      <h1 className="font-bold text-3xl text-center mb-10" id="projects">
+        PROJECTS
+      </h1>
       <div className="flex flex-wrap justify-around p-5 items-center gap-y-40 mb-10">
         {myProjects.map((project) => (
           <div key={project.id}>
@@ -81,15 +84,15 @@ function Projects() {
                   <p className="">{project.description}</p>
                 </div>
                 <div className="flex gap-3 mt-5">
-                  <button id="Btn">
-                    <FaGithub id="svgIcon" />
-                    <a href={project.github} id="text" target="blank">
+                  <button className="Btn">
+                    <FaGithub className="svgIcon" />
+                    <a href={project.github} className="text" target="blank">
                       Github
                     </a>
                   </button>
-                  <button id="Btn">
-                    <FaLink id="svgIcon" />
-                    <a href={project.goLive} id="text" target="blank">
+                  <button className="Btn">
+                    <FaLink className="svgIcon" />
+                    <a href={project.goLive} className="text" target="blank">
                       Go Live
                     </a>
                   </button>
