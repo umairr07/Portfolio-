@@ -2,18 +2,37 @@ import { profileUrl } from "../constants/url";
 import { FaGithub } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 import { FaXTwitter } from "react-icons/fa6";
+import { motion } from "framer-motion";
 function AboutMe() {
   return (
-    <div className="h-[80vh]" id="aboutMe">
+    <div className="h-[90vh] mt-20" id="aboutMe">
       <div>
-        <h1 className="font-bold text-3xl text-center">About Me?</h1>
+        <motion.h1
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 100 }}
+          transition={{ duration: 1 }}
+          className="font-bold text-3xl text-center"
+        >
+          About Me?
+        </motion.h1>
       </div>
       <div className="flex gap-20 justify-center mt-20">
         <div>
-          <img src={profileUrl} alt="" className="w-[300px]" />
+          <motion.img
+            whileInView={{ x: 0, opacity: 1 }}
+            initial={{ x: -100, opacity: 0 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            src={profileUrl}
+            alt=""
+            className="w-[300px]"
+          />
         </div>
 
-        <div>
+        <motion.div
+          whileInView={{ x: 0, opacity: 1 }}
+          initial={{ x: 100, opacity: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+        >
           <div className="w-[550px] ">
             <h1 className="font-bold text-3xl text-[#FFBD39] mt-5">
               Hello!! Welcome
@@ -36,7 +55,7 @@ function AboutMe() {
             <CiLinkedin className="cursor-pointer" />
             <FaXTwitter className="cursor-pointer" />
           </div> */}
-        </div>
+        </motion.div>
       </div>
     </div>
   );

@@ -15,7 +15,7 @@ import {
   REACT_URL,
   TAILWIND_URL,
 } from "../../constants/url";
-
+import { motion } from "framer-motion";
 import "./Projects.css";
 
 const projects = [
@@ -64,9 +64,15 @@ function Projects() {
   const [myProjects, setMyProjects] = useState(projects);
   return (
     <>
-      <h1 className="font-bold text-3xl text-center mb-10" id="projects">
+      <motion.h1
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 1 }}
+        className="font-bold text-3xl text-center mb-10"
+        id="projects"
+      >
         PROJECTS
-      </h1>
+      </motion.h1>
       <div className="flex flex-wrap justify-around p-5 items-center gap-y-40 mb-10">
         {myProjects.map((project) => (
           <div key={project.id}>

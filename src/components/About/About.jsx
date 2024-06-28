@@ -1,24 +1,44 @@
 import uLogo from "../../photos/new-u-logo.png";
 import "./About.css";
 import myResume from "../../assets/UmerShaikh.pdf";
+import { motion } from "framer-motion";
 
 function About() {
   const openResume = () => {
     window.open(myResume, "_blank");
   };
 
+  const container = (delay) => ({
+    hidden: { x: -100, opacity: 0 },
+    visible: {
+      x: 0,
+      opacity: 1,
+      transition: { duration: 0.5, delay: delay },
+    },
+  });
+
   return (
     <div className="flex justify-center gap-8 items-center h-[90vh]" id="about">
       <div className="flex flex-col gap-5 ">
-        <div className="flex items-center gap-3">
+        <motion.div
+          variants={container(0)}
+          initial="hidden"
+          animate="visible"
+          className="flex items-center gap-3"
+        >
           <p className="text-[#fff] font-extrabold text-5xl">Hello! I'm </p>
           <p className="text-[#FFBD39] font-extrabold text-5xl">Umer Shaikh</p>
-        </div>
+        </motion.div>
 
         <div>
-          <p className="text-3xl font-bold italic text-center">
+          <motion.p
+            variants={container(0.5)}
+            initial="hidden"
+            animate="visible"
+            className="text-3xl font-bold italic text-center"
+          >
             A Frontend Developer
-          </p>
+          </motion.p>
         </div>
 
         <div className="flex justify-center mt-5">
@@ -32,7 +52,14 @@ function About() {
             <span className="absolute top-0 left-0 w-full bg-green-500 duration-500 delay-300 group-hover:-translate-y-full h-full"></span>
             <span className="absolute delay-300 top-0 left-0 w-full bg-green-500 duration-500 group-hover:translate-y-full h-full"></span>
           </button> */}
-          <button className="button" type="button" onClick={openResume}>
+          <motion.button
+            variants={container(1)}
+            initial="hidden"
+            animate="visible"
+            className="button"
+            type="button"
+            onClick={openResume}
+          >
             <span className="button__text">Download CV</span>
             <span className="button__icon">
               <svg
@@ -47,11 +74,17 @@ function About() {
                 <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path>
               </svg>
             </span>
-          </button>
+          </motion.button>
         </div>
       </div>
       <div className="">
-        <img src={uLogo} alt="" />
+        <motion.img
+          initial={{ x: 100, opacity: 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 1, delay: 1.3 }}
+          src={uLogo}
+          alt=""
+        />
       </div>
     </div>
   );

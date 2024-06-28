@@ -9,12 +9,20 @@ import git from "../assets/git.svg";
 import java from "../assets/java.svg";
 import react from "../assets/react.svg";
 import firebase from "../photos/firebaseImage-removebg-preview.png";
+import { motion } from "framer-motion";
 
 const Skills = () => {
   return (
     <div>
       <div className="p-10 h-screen w-full" id="skills">
-        <p className="font-bold text-3xl text-center mb-10">SKILLS</p>
+        <motion.p
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 100 }}
+          transition={{ duration: 1 }}
+          className="font-bold text-3xl text-center mb-10"
+        >
+          SKILLS
+        </motion.p>
         <div className="p-2 flex flex-wrap justify-center gap-10">
           <Card title="HTML" href="#" Icon={ImHtmlFive2} image={HTML_URL} />
           <Card title="CSS" href="#" Icon={SiCss3} image={CSS_URL} />
@@ -33,7 +41,12 @@ const Skills = () => {
 const Card = ({ title, Icon, image }) => {
   return (
     <div>
-      <div className="w-[400px]  p-4 rounded border-[1px] border-slate-500 relative overflow-hidden group text-white cursor-pointer shadow-2xl ">
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 1 }}
+        className="w-[400px]  p-4 rounded border-[1px] border-slate-500 relative overflow-hidden group text-white cursor-pointer shadow-2xl "
+      >
         <div className="absolute inset-0 bg-gradient-to-r from-slate-400 to-gray-800 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300" />
 
         <Icon className="absolute z-10 -top-12 -right-12 text-9xl text-slate-300 group-hover:text-white group-hover:rotate-12 transition-transform duration-300" />
@@ -46,7 +59,7 @@ const Card = ({ title, Icon, image }) => {
         <h3 className="font-medium text-xl  group-hover:text-white relative z-10 duration-300">
           {title}
         </h3>
-      </div>
+      </motion.div>
     </div>
   );
 };

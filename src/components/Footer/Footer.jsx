@@ -1,4 +1,5 @@
 import "./Footer.css";
+import { motion } from "framer-motion";
 function Footer() {
   return (
     <div
@@ -6,16 +7,33 @@ function Footer() {
       id="footer"
     >
       <div className="flex justify-center items-center">
-        <h1 className="text-3xl italic font-bold">
+        <motion.h1
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 100 }}
+          transition={{ duration: 1, delay: 0 }}
+          className="text-3xl italic font-bold"
+        >
           Thank You for Visiting!! 😇
-        </h1>
+        </motion.h1>
       </div>
 
       <div>
-        <h1 className="text-xl underline">Connect With Me 👇</h1>
+        <motion.h1
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 100 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="text-xl underline"
+        >
+          Connect With Me 👇
+        </motion.h1>
       </div>
 
-      <div className="social-buttons">
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 1, delay: 1 }}
+        className="social-buttons"
+      >
         <a href="https://github.com/umairr07" className="social-button github">
           <svg
             class="cf-icon-svg"
@@ -72,7 +90,7 @@ function Footer() {
             </g>
           </svg>
         </a>
-      </div>
+      </motion.div>
     </div>
   );
 }
