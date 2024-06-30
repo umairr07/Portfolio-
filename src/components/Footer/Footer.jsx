@@ -11,7 +11,7 @@ function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 100 }}
           transition={{ duration: 1, delay: 0 }}
-          className="text-3xl italic font-bold"
+          className="lg:text-3xl italic font-bold sm:text-xl"
         >
           Thank You for Visiting!! 😇
         </motion.h1>
@@ -22,7 +22,7 @@ function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 100 }}
           transition={{ duration: 1, delay: 0.5 }}
-          className="text-xl underline"
+          className="lg:text-xl underline "
         >
           Connect With Me 👇
         </motion.h1>

@@ -45,7 +45,7 @@ const Card = ({ title, Icon, image }) => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 1 }}
-        className="w-[400px]  p-4 rounded border-[1px] border-slate-500 relative overflow-hidden group text-white cursor-pointer shadow-2xl "
+        className="lg:w-[400px] sm:w-[300px]  p-4 rounded border-[1px] border-slate-500 relative overflow-hidden group text-white cursor-pointer shadow-2xl "
       >
         <div className="absolute inset-0 bg-gradient-to-r from-slate-400 to-gray-800 translate-y-[100%] group-hover:translate-y-[0%] transition-transform duration-300" />
 

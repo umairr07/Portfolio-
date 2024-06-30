@@ -19,10 +19,10 @@ function About() {
 
   return (
     <div
-      className="lg:flex lg:flex-row lg:justify-center  lg:items-center h-[90vh] sm:flex sm:flex-col-reverse sm:top-0 sm:justify-center sm:items-center"
+      className="lg:flex lg:flex-row lg:justify-center lg:items-center h-[90vh] sm:flex sm:flex-col-reverse sm:gap-0 sm:justify-center sm:items-center"
       id="about"
     >
-      <div className="flex flex-col gap-5 ">
+      <div className="flex flex-col lg:gap-5 sm:gap-2">
         <motion.div
           variants={container(0)}
           initial="hidden"
