@@ -1,9 +1,11 @@
 import "./Navbar.css";
+import newLogo from "../../photos/latestlogo.png";
 function Navbar() {
   return (
-    <div className="flex justify-around p-5 items-center">
+    <div className="flex justify-around p-5 items-center border-2">
       <div>
-        <h1 className="font-bold text-3xl">Umer Shaikh</h1>
+        {/* <img src={myLogo} alt="" className="w-[300px]" /> */}
+        <img src={newLogo} alt="" className="w-[300px] cursor-pointer" />
       </div>
 
       <div className="flex gap-10">

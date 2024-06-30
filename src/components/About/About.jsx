@@ -18,7 +18,10 @@ function About() {
   });
 
   return (
-    <div className="flex justify-center gap-8 items-center h-[90vh]" id="about">
+    <div
+      className="lg:flex lg:flex-row lg:justify-center  lg:items-center h-[90vh] sm:flex sm:flex-col-reverse sm:top-0 sm:justify-center sm:items-center"
+      id="about"
+    >
       <div className="flex flex-col gap-5 ">
         <motion.div
           variants={container(0)}
@@ -26,8 +29,12 @@ function About() {
           animate="visible"
           className="flex items-center gap-3"
         >
-          <p className="text-[#fff] font-extrabold text-5xl">Hello! I'm </p>
-          <p className="text-[#FFBD39] font-extrabold text-5xl">Umer Shaikh</p>
+          <p className="text-[#fff] font-extrabold lg:text-5xl sm:text-2xl sm:ml-7">
+            Hello! I'm{" "}
+          </p>
+          <p className="text-[#FFBD39] font-extrabold lg:text-5xl sm:text-2xl ">
+            Umer Shaikh
+          </p>
         </motion.div>
 
         <div>
@@ -35,7 +42,7 @@ function About() {
             variants={container(0.5)}
             initial="hidden"
             animate="visible"
-            className="text-3xl font-bold italic text-center"
+            className="lg:text-3xl font-bold italic text-center sm:text-lg"
           >
             A Frontend Developer
           </motion.p>
@@ -60,7 +67,7 @@ function About() {
             type="button"
             onClick={openResume}
           >
-            <span className="button__text">Download CV</span>
+            <span className="button__text ">Download CV</span>
             <span className="button__icon">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -84,6 +91,7 @@ function About() {
           transition={{ duration: 1, delay: 1.3 }}
           src={uLogo}
           alt=""
+          className="lg:w-[500px] sm:w-[300px]"
         />
       </div>
     </div>

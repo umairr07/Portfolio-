@@ -14,7 +14,7 @@ function App() {
       </div>
 
       {/* Main content wrapper */}
-      <div className="mx-auto px-8">
+      <div className="">
         <Navbar />
         <About />
         <AboutMe />

@@ -32,6 +32,15 @@ const projects = [
     goLive: "https://google-drive-clone-phi.vercel.app/",
   },
   {
+    id: 4,
+    title: "GeekFoods",
+    description:
+      "Geekfoods: An e-commerce app offering a wide variety of delicious foods at your fingertips.",
+    imgURL: geekFoody,
+    github: "https://github.com/umairr07/GeekFoods",
+    goLive: "https://geek-foods.vercel.app/",
+  },
+  {
     id: 2,
     title: "Pix transformer App",
     description:
@@ -49,15 +58,6 @@ const projects = [
     github: "https://github.com/umairr07/Resume-Ai",
     goLive: "https://umairr07.github.io/Resume-Ai/",
   },
-  {
-    id: 4,
-    title: "GeekFoods",
-    description:
-      "Geekfoods: An e-commerce app offering a wide variety of delicious foods at your fingertips.",
-    imgURL: geekFoody,
-    github: "https://github.com/umairr07/GeekFoods",
-    goLive: "https://geek-foods.vercel.app/",
-  },
 ];
 
 function Projects() {
@@ -68,15 +68,15 @@ function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 1 }}
-        className="font-bold text-3xl text-center mb-10"
+        className="font-bold text-3xl text-center mb-10 lg:mt-0 sm:mt-[700px]"
         id="projects"
       >
         PROJECTS
       </motion.h1>
-      <div className="flex flex-wrap justify-around p-5 items-center gap-y-40 mb-10">
+      <div className="flex flex-wrap justify-around p-5 items-center gap-y-40 mb-10 ">
         {myProjects.map((project) => (
           <div key={project.id}>
-            <div className="group flex flex-col justify-start items-start gap-2 lg:w-[500px] sm:w-[330px] lg:h-[300px] sm:h-[200px] duration-500 relative rounded-lg p-4 bg-slate-100 hover:-translate-y-2 hover:shadow-lg hover:shadow-slate-500 cursor-pointer ">
+            <div className="group flex flex-col justify-start items-start gap-2 lg:w-[500px] sm:w-[330px] lg:h-[300px] sm:h-[250px] duration-500 relative rounded-lg p-4 bg-slate-100 hover:-translate-y-2 hover:shadow-lg hover:shadow-slate-500 cursor-pointer ">
               <div
                 className=" absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 lg:w-[350px] lg:h-1/2 rounded-lg bg-purple-400 sm:w-[200px] sm:h-[90px]"
                 alt="image here"
