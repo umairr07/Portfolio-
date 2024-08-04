@@ -11,7 +11,7 @@ function AboutMe() {
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 100 }}
           transition={{ duration: 1 }}
-          className="font-bold text-3xl text-center"
+          className="font-bold lg:text-5xl sm:text-3xl text-center"
         >
           About Me?
         </motion.h1>

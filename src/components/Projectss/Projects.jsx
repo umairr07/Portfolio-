@@ -68,7 +68,7 @@ function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 1 }}
-        className="font-bold text-3xl text-center mb-10 lg:mt-0 sm:mt-[700px]"
+        className="font-bold lg:text-5xl sm:text-3xl text-center mb-20 lg:mt-32 sm:mt-[1150px]"
         id="projects"
       >
         PROJECTS

@@ -3,12 +3,19 @@ import { SiCss3, SiTailwindcss } from "react-icons/si";
 import { FaJava } from "react-icons/fa";
 import { IoIosGitMerge } from "react-icons/io";
 import { IoLogoJavascript, IoLogoReact, IoLogoFirebase } from "react-icons/io5";
+import { FaNodeJs } from "react-icons/fa";
+import { SiExpress } from "react-icons/si";
 import { CSS_URL, HTML_URL, JS_URL } from "../constants/url";
+import { SiMongodb } from "react-icons/si";
 import tailwind from "../assets/tailwincss.svg";
 import git from "../assets/git.svg";
 import java from "../assets/java.svg";
 import react from "../assets/react.svg";
+
 import firebase from "../photos/firebaseImage-removebg-preview.png";
+import nodejs from "../assets/nodejs.svg";
+import express from "../assets/express.svg";
+import mongodb from "../assets/mongodb.svg";
 import { motion } from "framer-motion";
 
 const Skills = () => {
@@ -19,7 +26,7 @@ const Skills = () => {
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 100 }}
           transition={{ duration: 1 }}
-          className="font-bold text-3xl text-center mb-10"
+          className="font-bold lg:text-5xl sm:text-3xl text-center mb-10"
         >
           SKILLS
         </motion.p>
@@ -28,6 +35,9 @@ const Skills = () => {
           <Card title="CSS" href="#" Icon={SiCss3} image={CSS_URL} />
           <Card title="JavaScript" Icon={IoLogoJavascript} image={JS_URL} />
           <Card title="React" Icon={IoLogoReact} image={react} />
+          <Card title="Node JS" Icon={FaNodeJs} image={nodejs} />
+          <Card title="Express JS" Icon={SiExpress} image={express} />
+          <Card title="Mongo DB" Icon={SiMongodb} image={mongodb} />
           <Card title="Tailwind" Icon={SiTailwindcss} image={tailwind} />
           <Card title="Git" Icon={IoIosGitMerge} image={git} />
           <Card title="Java" Icon={FaJava} image={java} />
