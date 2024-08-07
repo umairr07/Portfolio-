@@ -63,7 +63,7 @@ const projects = [
 function Projects() {
   const [myProjects, setMyProjects] = useState(projects);
   return (
-    <>
+    <div>
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
@@ -76,7 +76,12 @@ function Projects() {
       <div className="flex flex-wrap justify-around p-5 items-center gap-y-40 mb-10 ">
         {myProjects.map((project) => (
           <div key={project.id}>
-            <div className="group flex flex-col justify-start items-start gap-2 lg:w-[500px] sm:w-[330px] lg:h-[300px] sm:h-[250px] duration-500 relative rounded-lg p-4 bg-slate-100 hover:-translate-y-2 hover:shadow-lg hover:shadow-slate-500 cursor-pointer sm:mr-10 lg:mr-0">
+            <motion.div
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 100 }}
+              transition={{ duration: 1 }}
+              className="group flex flex-col justify-start items-start gap-2 lg:w-[500px] sm:w-[330px] lg:h-[300px] sm:h-[250px] duration-500 relative rounded-lg p-4 bg-slate-100 hover:-translate-y-2 hover:shadow-lg hover:shadow-slate-500 cursor-pointer sm:mr-10 lg:mr-0"
+            >
               <div
                 className=" absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 lg:w-[350px] lg:h-1/2 rounded-lg bg-purple-400 sm:w-[200px] sm:h-[90px]"
                 alt="image here"
@@ -104,11 +109,11 @@ function Projects() {
                   </button>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
         ))}
       </div>
-    </>
+    </div>
   );
 }
 

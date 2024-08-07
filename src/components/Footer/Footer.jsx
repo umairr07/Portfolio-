@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 function Footer() {
   return (
     <div
-      className="flex flex-col gap-4 justify-center items-center h-screen"
+      className="flex flex-col gap-4 justify-center items-center h-screen sm:mt-28"
       id="footer"
     >
       <div className="flex justify-center items-center">

@@ -4,7 +4,7 @@ import Skills from "./components/Skills";
 import Projects from "./components/Projectss/Projects";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
-import Navbar from "./components/Navbar/Navbar";
+import NavbarComponent from "./components/Navbar/Navbar";
 
 function App() {
   return (
@@ -15,7 +15,7 @@ function App() {
 
       {/* Main content wrapper */}
       <div className="">
-        <Navbar />
+        <NavbarComponent />
         <About />
         <AboutMe />
         <Skills />
