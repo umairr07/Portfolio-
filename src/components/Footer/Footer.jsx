@@ -11,7 +11,7 @@ function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 100 }}
           transition={{ duration: 1, delay: 0 }}
-          className="lg:text-3xl italic font-bold sm:text-xl"
+          className="lg:text-3xl md:text-2xl italic font-bold sm:text-xl"
         >
           Thank You for Visiting!! 😇
         </motion.h1>

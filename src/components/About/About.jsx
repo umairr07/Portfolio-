@@ -19,7 +19,7 @@ function About() {
 
   return (
     <div
-      className="lg:flex lg:flex-row lg:justify-center lg:items-center h-[90vh] sm:flex sm:flex-col-reverse sm:gap-0 sm:justify-center sm:items-center"
+      className="lg:flex lg:flex-row lg:justify-center lg:items-center md:flex md:flex-row md:justify-center md:items-center md:gap-10 h-[90vh] sm:flex sm:flex-col-reverse sm:gap-0 sm:justify-center sm:items-center"
       id="about"
     >
       <div className="flex flex-col lg:gap-5 sm:gap-2">
@@ -44,7 +44,7 @@ function About() {
             animate="visible"
             className="lg:text-3xl font-bold italic text-center sm:text-lg"
           >
-            A Frontend Developer
+            A Full Stack Developer
           </motion.p>
         </div>
 

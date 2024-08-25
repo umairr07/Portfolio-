@@ -16,7 +16,7 @@ function AboutMe() {
           About Me?
         </motion.h1>
       </div>
-      <div className="lg:flex lg:flex-row lg:gap-20 justify-center lg:mt-20 sm:flex sm:flex-col sm:justify-center sm:items-center sm:gap-1 sm:mt-8">
+      <div className="lg:flex lg:flex-row lg:gap-20 md:flex  md:flex-row  md:gap-14  justify-center lg:mt-20 sm:flex sm:flex-col sm:justify-center sm:items-center sm:gap-1 sm:mt-8">
         <div>
           <motion.img
             whileInView={{ x: 0, opacity: 1 }}
@@ -37,7 +37,7 @@ function AboutMe() {
             <h1 className="font-bold lg:text-3xl sm:text-xl text-[#FFBD39] mt-5">
               Hello!! Welcome
             </h1>
-            <p className="lg:text-lg mt-5 ">
+            <p className="lg:text-lg md:text-[14px] mt-5 ">
               Hi!! I'm Umair Shaikh, a passionate Frontend Developer from India.
               I love creating beautiful and responsive web interfaces using
               HTML, CSS, JavaScript, and React. Let's build something amazing
@@ -45,7 +45,7 @@ function AboutMe() {
             </p>
           </div>
           <a href="#footer">
-            <button className="relative px-6 py-2 rounded-md bg-black isolation-auto z-10 border-2 border-slate-200 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-white hover:text-black before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 mt-5 ">
+            <button className="relative px-6 py-2 rounded-md bg-black isolation-auto z-10 border-2 border-slate-200 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-white hover:text-black before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 mt-5 md:w-[50%] md:text-[12px]">
               Contact Me!
             </button>
           </a>

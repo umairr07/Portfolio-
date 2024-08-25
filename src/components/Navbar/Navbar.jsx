@@ -14,39 +14,51 @@ function NavbarComponent() {
   return (
     <div className="relative w-full">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 sm:px-6 lg:px-8">
-        <div className="inline-flex items-center space-x-2 mt-5">
+        <div className="inline-flex items-center space-x-2 mt-5 ">
           <div>
             <img
               src={newLogo}
               alt=""
-              className="lg:w-[300px] cursor-pointer sm:w-[200px] sm:mr-20"
+              className="lg:w-[300px] md:w-[250px] cursor-pointer sm:w-[200px] sm:mr-20"
             />
           </div>
         </div>
-        <div className="hidden lg:flex gap-10 sm:hidden">
+        <div className="hidden lg:flex md:flex gap-10 sm:hidden md:mt-5">
           <a href="#aboutMe">
-            <button className="cursor-pointer text-xl" id="nav-button">
+            <button
+              className="cursor-pointer lg:text-xl md:text-[16px]"
+              id="nav-button"
+            >
               About Me
             </button>
           </a>
           <a href="#skills">
-            <button className="cursor-pointer text-xl" id="nav-button">
+            <button
+              className="cursor-pointer lg:text-xl md:text-[16px]"
+              id="nav-button"
+            >
               Skills
             </button>
           </a>
           <a href="#projects">
-            <button className="cursor-pointer text-xl" id="nav-button">
+            <button
+              className="cursor-pointer lg:text-xl md:text-[16px]"
+              id="nav-button"
+            >
               Projects
             </button>
           </a>
           <a href="#footer">
-            <button className="cursor-pointer text-xl" id="nav-button">
+            <button
+              className="cursor-pointer lg:text-xl md:text-[16px]"
+              id="nav-button"
+            >
               Contact
             </button>
           </a>
         </div>
 
-        <div className="lg:hidden mt-5">
+        <div className="lg:hidden md:hidden mt-5">
           <Menu onClick={toggleMenu} className="h-6 w-6 cursor-pointer" />
         </div>
         {isMenuOpen && (
