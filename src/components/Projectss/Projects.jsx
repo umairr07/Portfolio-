@@ -3,6 +3,7 @@ import resume from "../../photos/resume.png";
 import googledrive from "../../photos/googleDrive.png";
 import pix from "../../photos/pix.png";
 import geekFoody from "../../photos/geekfoods.png";
+import naturenook from "../../photos/naturenook.png";
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
 import {
@@ -21,6 +22,16 @@ import react from "../../assets/react.svg";
 import tailwind from "../../assets/tailwincss.svg";
 
 const projects = [
+  {
+    id: 0,
+    title: "Nature Nook",
+    description:
+      "An e-commerce platform dedicated to providing daily essentials, offering convenience and a seamless shopping experience.",
+    imgURL: naturenook,
+    github: "https://github.com/umairr07/Nature-Nook",
+    goLive: "https://nature-nook-seven.vercel.app/",
+    techstack: [react, tailwind, FIREBASE_URL],
+  },
   {
     id: 1,
     title: "Google Drive Clone",

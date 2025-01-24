@@ -38,15 +38,26 @@ function AboutMe() {
               Hello!! Welcome
             </h1>
             <p className="lg:text-lg md:text-[14px] mt-5 ">
-              Hi!! I'm Umair Shaikh, a passionate Frontend Developer from India.
-              I love creating beautiful and responsive web interfaces using
-              HTML, CSS, JavaScript, and React. Let's build something amazing
-              together!
+              I’m a passionate Full Stack Developer specializing in the MERN
+              stack, with a strong focus on creating dynamic, user-friendly web
+              applications.Whether it's crafting intuitive frontend designs
+              using React and Tailwind CSS or building robust backend systems
+              with Node.js and MongoDB, I take pride in every step of the
+              development process.
             </p>
           </div>
           <a href="#footer">
-            <button className="relative px-6 py-2 rounded-md bg-black isolation-auto z-10 border-2 border-slate-200 before:absolute before:w-full before:transition-all before:duration-700 before:hover:w-full before:-left-full before:hover:left-0 before:rounded-full before:bg-white hover:text-black before:-z-10 before:aspect-square before:hover:scale-150 overflow-hidden before:hover:duration-700 mt-5 md:w-[50%] md:text-[12px]">
-              Contact Me!
+            <button className="relative flex items-center px-6 py-3 mt-5 overflow-hidden font-medium transition-all bg-[#FFBD39] rounded-md group">
+              <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-yellow-600 rounded group-hover:-mr-4 group-hover:-mt-4">
+                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+              </span>
+              <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-yellow-600  rounded group-hover:-ml-4 group-hover:-mb-4">
+                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
+              </span>
+              <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-yellow-600 rounded-md group-hover:translate-x-0"></span>
+              <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
+                Contact Me!
+              </span>
             </button>
           </a>
 
