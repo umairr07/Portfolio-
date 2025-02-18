@@ -64,7 +64,7 @@ function Footer() {
           </svg>
         </a>
         <a
-          href="https://www.instagram.com/umairrr__07/"
+          href="https://www.instagram.com/umairrr_4u/"
           className="social-button instagram"
         >
           <svg

@@ -1,11 +1,8 @@
 import profileUrl from "../photos/developer-image.webp";
-import { FaGithub } from "react-icons/fa";
-import { CiLinkedin } from "react-icons/ci";
-import { FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
 function AboutMe() {
   return (
-    <div className="h-[90vh] mt-20" id="aboutMe">
+    <div className="h-[90vh] mt-20 sm:mb-20 lg:mb-0" id="aboutMe">
       <div>
         <motion.h1
           whileInView={{ opacity: 1, y: 0 }}
@@ -47,25 +44,12 @@ function AboutMe() {
             </p>
           </div>
           <a href="#footer">
-            <button className="relative flex items-center px-6 py-3 mt-5 overflow-hidden font-medium transition-all bg-[#FFBD39] rounded-md group">
-              <span className="absolute top-0 right-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-yellow-600 rounded group-hover:-mr-4 group-hover:-mt-4">
-                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-              </span>
-              <span className="absolute bottom-0 rotate-180 left-0 inline-block w-4 h-4 transition-all duration-500 ease-in-out bg-yellow-600  rounded group-hover:-ml-4 group-hover:-mb-4">
-                <span className="absolute top-0 right-0 w-5 h-5 rotate-45 translate-x-1/2 -translate-y-1/2 bg-white"></span>
-              </span>
-              <span className="absolute bottom-0 left-0 w-full h-full transition-all duration-500 ease-in-out delay-200 -translate-x-full bg-yellow-600 rounded-md group-hover:translate-x-0"></span>
-              <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-white">
-                Contact Me!
-              </span>
+            <button className="text-[16px] mt-5 w-32 h-8 rounded bg-emerald-500 text-white relative overflow-hidden group z-10 hover:text-white duration-1000">
+              <span className="absolute bg-emerald-600 w-36 h-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
+              <span className="absolute bg-emerald-800 w-36 h-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>
+              Contact Me!
             </button>
           </a>
-
-          {/* <div className="flex gap-5 mt-10 text-3xl ">
-            <FaGithub className="cursor-pointer" />
-            <CiLinkedin className="cursor-pointer" />
-            <FaXTwitter className="cursor-pointer" />
-          </div> */}
         </motion.div>
       </div>
     </div>

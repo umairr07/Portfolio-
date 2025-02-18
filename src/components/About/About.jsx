@@ -49,41 +49,27 @@ function About() {
         </div>
 
         <div className="flex justify-center mt-5">
-          {/* <button className="cursor-pointer relative group overflow-hidden border-2 px-8 py-2 border-white">
-            <span className="font-bold text-white text-xl relative z-10 group-hover:text-white duration-500">
-              Download CV
-            </span>
-            <span className="absolute top-0 left-0 w-full bg-green-500 duration-500 group-hover:-translate-x-full h-full"></span>
-            <span className="absolute top-0 left-0 w-full bg-green-500 duration-500 group-hover:translate-x-full h-full"></span>
-
-            <span className="absolute top-0 left-0 w-full bg-green-500 duration-500 delay-300 group-hover:-translate-y-full h-full"></span>
-            <span className="absolute delay-300 top-0 left-0 w-full bg-green-500 duration-500 group-hover:translate-y-full h-full"></span>
-          </button> */}
           <motion.button
-            variants={container(1)}
-            initial="hidden"
-            animate="visible"
-            className="button"
-            type="button"
+            initial={{ x: -100, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 1 }}
             onClick={openResume}
+            className="cursor-pointer flex lg:text-xl  justify-between bg-gray-800 px-5 sm:py-2 lg:py-2 rounded-full text-white tracking-wider shadow-xl hover:bg-gray-900 hover:scale-105 duration-500 hover:ring-1 font-mono w-[150px]"
           >
-            <span className="button__text ">Download CV</span>
-            <span className="button__icon">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 35 35"
-                id="bdd05811-e15d-428c-bb53-8661459f9307"
-                data-name="Layer 2"
-                className="svg"
-              >
-                <path d="M17.5,22.131a1.249,1.249,0,0,1-1.25-1.25V2.187a1.25,1.25,0,0,1,2.5,0V20.881A1.25,1.25,0,0,1,17.5,22.131Z"></path>
-                <path d="M17.5,22.693a3.189,3.189,0,0,1-2.262-.936L8.487,15.006a1.249,1.249,0,0,1,1.767-1.767l6.751,6.751a.7.7,0,0,0,.99,0l6.751-6.751a1.25,1.25,0,0,1,1.768,1.767l-6.752,6.751A3.191,3.191,0,0,1,17.5,22.693Z"></path>
-                <path d="M31.436,34.063H3.564A3.318,3.318,0,0,1,.25,30.749V22.011a1.25,1.25,0,0,1,2.5,0v8.738a.815.815,0,0,0,.814.814H31.436a.815.815,0,0,0,.814-.814V22.011a1.25,1.25,0,1,1,2.5,0v8.738A3.318,3.318,0,0,1,31.436,34.063Z"></path>
-              </svg>
-            </span>
+            Resume
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+              className="w-5 h-5 animate-bounce"
+            >
+              <path d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"></path>
+            </svg>
           </motion.button>
         </div>
       </div>
+
       <div className="">
         <motion.img
           initial={{ x: 100, opacity: 0 }}

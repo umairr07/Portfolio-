@@ -63,69 +63,46 @@ function NavbarComponent() {
         </div>
         {isMenuOpen && (
           <motion.div
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: -100 }}
-            transition={{ duration: 0.5 }}
-            className="absolute bg-[#191923] inset-x-0 top-0 z-50 origin-top-right transform p-2 transition lg:hidden rounded-xl"
+            initial={{ opacity: 0, x: "100vw" }} // Fully off-screen
+            animate={{ opacity: 1, x: 0 }} // Slide in smoothly
+            exit={{ opacity: 0, x: "100vw" }} // Slide out smoothly
+            transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }} // Smooth cubic bezier
+            className="fixed inset-0 bg-[#191923] z-50 transform transition lg:hidden w-full h-full"
           >
-            <div className="divide-y-2 divide-gray-50 rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-              <div className="px-5 pb-6 pt-5">
+            <div className="flex flex-col justify-center items-center h-full">
+              <div className="absolute top-5 flex justify-center items-center gap-12">
                 <div>
                   <img
                     src={newLogo}
                     alt=""
-                    className="lg:w-[300px] cursor-pointer sm:w-[180px] sm:mr-20 sm:mtmd"
+                    className="lg:w-[300px] md:w-[250px] cursor-pointer sm:w-[200px] sm:mr-20"
                   />
                 </div>
-                <div className="flex items-center justify-between">
-                  <div className="-mr-2 mt-5">
-                    <button
-                      type="button"
-                      onClick={toggleMenu}
-                      className="inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-black"
-                    >
-                      <span className="sr-only">Close menu</span>
-                      <X className="h-6 w-6" aria-hidden="true" />
-                    </button>
-                  </div>
-                </div>
-                <div className="mt-6">
-                  <nav className="grid gap-y-4">
-                    <a href="#aboutMe">
-                      <button
-                        className="cursor-pointer text-md"
-                        id="nav-button"
-                      >
-                        About Me
-                      </button>
-                    </a>
-                    <a href="#skills">
-                      <button
-                        className="cursor-pointer text-md"
-                        id="nav-button"
-                      >
-                        Skills
-                      </button>
-                    </a>
-                    <a href="#projects">
-                      <button
-                        className="cursor-pointer text-md"
-                        id="nav-button"
-                      >
-                        Projects
-                      </button>
-                    </a>
-                    <a href="#footer">
-                      <button
-                        className="cursor-pointer text-md"
-                        id="nav-button"
-                      >
-                        Contact
-                      </button>
-                    </a>
-                  </nav>
-                </div>
+                <button
+                  type="button"
+                  onClick={toggleMenu}
+                  className="text-gray-400 hover:bg-gray-100 hover:text-gray-500 p-2 rounded-md"
+                >
+                  <X className="h-6 w-6" aria-hidden="true" />
+                </button>
               </div>
+              <nav className="flex flex-col gap-5 text-center">
+                {[
+                  { href: "#aboutMe", label: "About Me" },
+                  { href: "#skills", label: "Skills" },
+                  { href: "#projects", label: "Projects" },
+                  { href: "#footer", label: "Contact" },
+                ].map((item) => (
+                  <a
+                    key={item.href}
+                    href={item.href}
+                    onClick={toggleMenu} // Close menu on click
+                    className="text-white text-xl font-medium cursor-pointer"
+                  >
+                    {item.label}
+                  </a>
+                ))}
+              </nav>
             </div>
           </motion.div>
         )}
