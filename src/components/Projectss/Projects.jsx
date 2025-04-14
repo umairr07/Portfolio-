@@ -7,6 +7,7 @@ import naturenook from "../../photos/naturenook.png";
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
 import {
+  CLERK_URL,
   CSS_URL,
   FIREBASE_URL,
   GIT_URL,
@@ -31,7 +32,7 @@ const projects = [
     imgURL: naturenook,
     github: "https://github.com/umairr07/Nature-Nook",
     goLive: "https://nature-nook-seven.vercel.app/",
-    techstack: [react, tailwind, FIREBASE_URL],
+    techstack: [react, tailwind, CLERK_URL],
   },
   {
     id: 1,
@@ -84,7 +85,7 @@ function Projects() {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 1 }}
-        className="font-bold lg:text-5xl sm:text-3xl text-center mb-20 lg:mt-32 md:mt-[600px] sm:mt-[1150px]"
+        className="font-bold lg:text-5xl sm:text-3xl text-center mb-20 lg:mt-32 md:mt-[600px] sm:mt-[1250px]"
         id="projects"
       >
         PROJECTS

@@ -1,6 +1,6 @@
 import uLogo from "../../photos/new-u-logo.png";
 import "./About.css";
-import myResume from "../../assets/umerResume.pdf";
+import myResume from "../../assets/Umer Resume.pdf";
 import { motion } from "framer-motion";
 
 function About() {

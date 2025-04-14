@@ -5,12 +5,13 @@ import { IoIosGitMerge } from "react-icons/io";
 import { IoLogoJavascript, IoLogoReact, IoLogoFirebase } from "react-icons/io5";
 import { FaNodeJs } from "react-icons/fa";
 import { SiExpress } from "react-icons/si";
-import { CSS_URL, HTML_URL, JS_URL } from "../constants/url";
+import { CLERK_URL, CSS_URL, HTML_URL, JS_URL } from "../constants/url";
 import { SiMongodb } from "react-icons/si";
 import tailwind from "../assets/tailwincss.svg";
 import git from "../assets/git.svg";
 import java from "../assets/java.svg";
 import react from "../assets/react.svg";
+import { SiClerk } from "react-icons/si";
 
 import firebase from "../photos/firebaseImage-removebg-preview.png";
 import nodejs from "../assets/nodejs.svg";
@@ -42,6 +43,7 @@ const Skills = () => {
           <Card title="Git" Icon={IoIosGitMerge} image={git} />
           <Card title="Java" Icon={FaJava} image={java} />
           <Card title="Firebase" Icon={IoLogoFirebase} image={firebase} />
+          <Card title="Clerk" Icon={SiClerk} image={CLERK_URL} />
         </div>
       </div>
     </div>

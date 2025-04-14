@@ -17,3 +17,5 @@ export const FIREBASE_URL = "https://w7.pngwing.com/pngs/562/910/png-transparent
 export const JAVA_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh_-2cE2-XOyuWyEQJSler4t1ye5COocC5bA&s"
 
 export const RESUME_URL = "../photos/resume.png"
+
+export const CLERK_URL = "https://assets.streamlinehq.com/image/private/w_300,h_300,ar_1/f_auto/v1/icons/logos/clerk-uvna1mxd54k50cohb8o2i.png/clerk-nzr7956knokwjx841f6yye.png?_a=DAJFJtWIZAAC"
