@@ -1,59 +1,75 @@
-import profileUrl from "../photos/developer-image.webp";
 import { motion } from "framer-motion";
-function AboutMe() {
+import { Code, Monitor, Rocket } from "lucide-react";
+
+const AboutMe = () => {
   return (
-    <div className="h-[90vh] mt-20 sm:mb-20 lg:mb-0" id="aboutMe">
-      <div>
-        <motion.h1
+    <section className="flex flex-col items-center py-16 gap-10" id="aboutMe">
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 0.6 }}
+        className="max-w-3xl text-center"
+      >
+        <h2 className="text-4xl font-bold mb-6 ">
+          About <span className="">Me</span>
+        </h2>
+        <p className="text-lg leading-relaxed mb-10">
+          A passionate{" "}
+          <span className="text-blue-500">Full Stack Developer </span>
+          specializing in building responsive and user-friendly web
+          applications. I enjoy turning complex problems into clean, intuitive
+          interfaces using modern tools like React, Tailwind CSS, Node.js, and
+          MongoDB.
+        </p>
+      </motion.div>
+
+      <div className="grid md:grid-cols-3 gap-6 max-w-4xl">
+        {/* Card 1 */}
+        <motion.div
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 100 }}
           transition={{ duration: 1 }}
-          className="font-bold lg:text-5xl sm:text-3xl text-center"
+          className="bg-white/10 backdrop-blur-md shadow-md rounded-2xl p-6 text-center"
         >
-          About Me?
-        </motion.h1>
-      </div>
-      <div className="lg:flex lg:flex-row lg:gap-20 md:flex  md:flex-row  md:gap-14  justify-center lg:mt-20 sm:flex sm:flex-col sm:justify-center sm:items-center sm:gap-1 sm:mt-8">
-        <div>
-          <motion.img
-            whileInView={{ x: 0, opacity: 1 }}
-            initial={{ x: -100, opacity: 0 }}
-            transition={{ duration: 1, delay: 0.5 }}
-            src={profileUrl}
-            alt=""
-            className="lg:w-[400px] lg:h-[300px] object-cover rounded-xl sm:w-[300px] sm:h-[200px]"
-          />
-        </div>
+          <Monitor size={40} className="mx-auto text-blue-500 mb-3" />
+          <h3 className="font-semibold text-lg mb-2 ">Frontend Focused</h3>
+          <p className=" text-sm">
+            Crafting responsive, accessible, and modern UIs with React and
+            Tailwind.
+          </p>
+        </motion.div>
 
+        {/* Card 2 */}
         <motion.div
-          whileInView={{ x: 0, opacity: 1 }}
-          initial={{ x: 100, opacity: 0 }}
-          transition={{ duration: 1, delay: 0.5 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 100 }}
+          transition={{ duration: 1.5 }}
+          className="bg-white/10 backdrop-blur-md shadow-md rounded-2xl p-6 text-center"
         >
-          <div className="lg:w-[550px] sm:w-[300px]">
-            <h1 className="font-bold lg:text-3xl sm:text-xl text-[#FFBD39] mt-5">
-              Hello!! Welcome
-            </h1>
-            <p className="lg:text-lg md:text-[14px] mt-5 ">
-              I’m a passionate Full Stack Developer specializing in the MERN
-              stack, with a strong focus on creating dynamic, user-friendly web
-              applications.Whether it's crafting intuitive frontend designs
-              using React and Tailwind CSS or building robust backend systems
-              with Node.js and MongoDB, I take pride in every step of the
-              development process.
-            </p>
-          </div>
-          <a href="#footer">
-            <button className="text-[16px] mt-5 w-32 h-8 rounded bg-emerald-500 text-white relative overflow-hidden group z-10 hover:text-white duration-1000">
-              <span className="absolute bg-emerald-600 w-36 h-36 rounded-full group-hover:scale-100 scale-0 -z-10 -left-2 -top-10 group-hover:duration-500 duration-700 origin-center transform transition-all"></span>
-              <span className="absolute bg-emerald-800 w-36 h-36 -left-2 -top-10 rounded-full group-hover:scale-100 scale-0 -z-10 group-hover:duration-700 duration-500 origin-center transform transition-all"></span>
-              Contact Me!
-            </button>
-          </a>
+          <Code size={40} className="mx-auto text-blue-500 mb-3" />
+          <h3 className="font-semibold text-lg mb-2 ">Full Stack Skills</h3>
+          <p className=" text-sm">
+            Comfortable with MERN stack — from API creation to deployment.
+          </p>
+        </motion.div>
+
+        {/* Card 3 */}
+        <motion.div
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 100 }}
+          transition={{ duration: 2 }}
+          className="bg-white/10 backdrop-blur-md shadow-md rounded-2xl p-6 text-center"
+        >
+          <Rocket size={40} className="mx-auto text-blue-500 mb-3" />
+          <h3 className="font-semibold text-lg mb-2 ">Always Growing</h3>
+          <p className=" text-sm">
+            Constantly learning new technologies and improving development
+            practices.
+          </p>
         </motion.div>
       </div>
-    </div>
+    </section>
   );
-}
+};
 
 export default AboutMe;

@@ -1,12 +1,17 @@
 import "@fontsource/poppins/"; // Defaults to weight 400
 import AboutMe from "./components/AboutMe";
-import Skills from "./components/Skills";
 import Projects from "./components/Projectss/Projects";
 import Footer from "./components/Footer/Footer";
 import About from "./components/About/About";
 import NavbarComponent from "./components/Navbar/Navbar";
+import Skills from "./components/Skills/Skills";
+import FloatingButton from "./components/Floating Button/FloatingButton";
 
 function App() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className="overflow-x-hidden text-neutral-300 antialiased">
       <div className="fixed top-0 -z-10 h-full w-full">
@@ -14,7 +19,7 @@ function App() {
       </div>
 
       {/* Main content wrapper */}
-      <div className="">
+      <div className="space-y-20">
         <NavbarComponent />
         <About />
         <AboutMe />
@@ -22,6 +27,7 @@ function App() {
         <Projects />
         <Footer />
       </div>
+      <FloatingButton onClick={scrollToTop} />
     </div>
   );
 }

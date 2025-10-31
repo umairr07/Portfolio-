@@ -1,151 +1,183 @@
 import { useState } from "react";
-import resume from "../../photos/resume.png";
-import googledrive from "../../photos/googleDrive.png";
-import pix from "../../photos/pix.png";
-import geekFoody from "../../photos/geekfoods.png";
-import naturenook from "../../photos/naturenook.png";
-import { FaGithub } from "react-icons/fa";
-import { FaLink } from "react-icons/fa6";
-import {
-  CLERK_URL,
-  CSS_URL,
-  FIREBASE_URL,
-  GIT_URL,
-  HTML_URL,
-  JAVA_URL,
-  JS_URL,
-  REACT_URL,
-  TAILWIND_URL,
-} from "../../constants/url";
+import { ExternalLink, Github } from "lucide-react"; // install lucide-react for icons
+import { majorProjects, minorProjects } from "./projectsdata";
 import { motion } from "framer-motion";
-import "./Projects.css";
-import react from "../../assets/react.svg";
-import tailwind from "../../assets/tailwincss.svg";
-import { IoIosLink } from "react-icons/io";
 
-const projects = [
-  {
-    id: 0,
-    title: "Nature Nook",
-    description:
-      "An e-commerce platform dedicated to providing daily essentials, offering convenience and a seamless shopping experience.",
-    imgURL: naturenook,
-    github: "https://github.com/umairr07/Nature-Nook",
-    goLive: "https://nature-nook-seven.vercel.app/",
-    techstack: [react, tailwind, CLERK_URL],
-  },
-  {
-    id: 1,
-    title: "Google Drive Clone",
-    description:
-      "A sleek and responsive Google clone utilizing ReactJS, Firebase for backend services, and Tailwind CSS for modern styling.",
-    imgURL: googledrive,
+const Projects = () => {
+  const [majorProjectsState, setMajorProjectsState] = useState(true);
+  const [minorProjectsState, setMinorProjectsState] = useState(false);
 
-    github: "https://github.com/umairr07/Google-Drive-Clone",
-    goLive: "https://google-drive-clone-phi.vercel.app/",
-    techstack: [react, tailwind, FIREBASE_URL],
-  },
-  {
-    id: 4,
-    title: "GeekFoods",
-    description:
-      "Geekfoods: An e-commerce app offering a wide variety of delicious foods at your fingertips.",
-    imgURL: geekFoody,
-    github: "https://github.com/umairr07/GeekFoods",
-    goLive: "https://geek-foods.vercel.app/",
-    techstack: [react, tailwind],
-  },
-  {
-    id: 2,
-    title: "Pix transformer App",
-    description:
-      "A versatile Pix Transformer that seamlessly removes backgrounds and converts image file types with ease.",
-    imgURL: pix,
-    github: "https://github.com/umairr07/PixTransformer",
-    goLive: "https://pix-transformer.vercel.app/",
-    techstack: [react, tailwind],
-  },
-  {
-    id: 3,
-    title: "Interview Ready with AI",
-    imgURL: resume,
-    description:
-      "Interview Ready with AI generates customized resumes and recommends job opportunities based on your skills.",
-    github: "https://github.com/umairr07/Resume-Ai",
-    goLive: "https://umairr07.github.io/Resume-Ai/",
-    techstack: [HTML_URL, CSS_URL, JS_URL],
-  },
-];
+  const handleMajorProjects = () => {
+    setMajorProjectsState(true);
+    setMinorProjectsState(false);
+  };
 
-function Projects() {
-  const [myProjects, setMyProjects] = useState(projects);
+  const handleMinorProjects = () => {
+    setMinorProjectsState(true);
+    setMajorProjectsState(false);
+  };
+
   return (
-    <div>
+    <div className=" text-white py-16 px-40" id="projects">
+      {/* Heading */}
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
-        transition={{ duration: 1 }}
-        className="font-bold lg:text-5xl sm:text-3xl text-center mb-20 lg:mt-32 md:mt-[600px] sm:mt-[1250px]"
-        id="projects"
+        transition={{ duration: 0.8 }}
+        className="text-4xl font-bold text-center mb-12"
       >
-        PROJECTS
+        Projects
       </motion.h1>
-      <div className="flex flex-wrap justify-around p-5 items-center gap-y-40 mb-10 ">
-        {myProjects.map((project) => (
-          <div key={project.id}>
-            <motion.div
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: 100 }}
-              transition={{ duration: 1 }}
-              className="group flex flex-col justify-start items-start gap-2 lg:w-[500px] md:w-[400px] sm:w-[330px] lg:h-[300px] sm:h-[300px] duration-500 relative rounded-lg p-4 bg-slate-100 hover:-translate-y-2 hover:shadow-lg hover:shadow-slate-500 cursor-pointer sm:mr-10 lg:mr-0"
-            >
-              <div
-                className=" absolute duration-700 shadow-md group-hover:-translate-y-4 group-hover:-translate-x-4 -bottom-10 -right-10 lg:w-[350px] lg:h-1/2 rounded-lg bg-purple-400 md:w-[280px] sm:w-[200px] sm:h-[90px]"
-                alt="image here"
-              >
-                <img src={project.imgURL} alt="" />
-              </div>
 
-              <div className="text-black">
-                <div className="">
-                  <div className="flex justify-start items-center gap-3">
-                    <h2 className="text-2xl font-bold mb-2 ">
-                      {project.title}
-                    </h2>
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 0.8 }}
+        className="flex justify-around"
+      >
+        <span className="text-xl cursor-pointer" onClick={handleMajorProjects}>
+          Major Projects
+        </span>
+        <div className="w-[2px] h-6 bg-gray-400"></div>
+        <span className="text-xl cursor-pointer" onClick={handleMinorProjects}>
+          Mini Projects
+        </span>
+      </motion.div>
+      <div className="w-full h-[1px] bg-white/20 mt-3 mb-10"></div>
+
+      {/* Projects List */}
+      <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 0.8 }}
+        className="flex flex-col gap-12"
+      >
+        {majorProjectsState
+          ? majorProjects?.map((project) => (
+              <div
+                key={project.id}
+                className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 flex flex-col md:flex-row items-center md:items-start gap-8 shadow-lg"
+              >
+                {/* Left Image */}
+                <div className="w-full md:w-[510px]">
+                  <img
+                    src={project.imageUrl}
+                    alt={project.title}
+                    className="rounded-xl w-[500px] object-cover border border-gray-700"
+                  />
+                </div>
+
+                {/* Right Content */}
+                <div className="w-full md:w-1/2 space-y-5">
+                  {/* Title and Icons */}
+                  <div className="flex justify-between items-center">
+                    <h2 className="text-4xl font-bold">{project.title}</h2>
+                    <div className="flex gap-3">
+                      <a
+                        href={project.projectUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 rounded-full p-3 
+               hover:bg-white/20 hover:-translate-y-1 transition-all duration-300 transform"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full p-3 
+               hover:bg-white/20 hover:-translate-y-1 transition-all duration-300 transform"
+                      >
+                        <Github size={20} />
+                      </a>
+                    </div>
                   </div>
-                  <div className="flex gap-2 py-3">
-                    {project?.techstack?.map((tech) => (
-                      <div key={tech}>
-                        <img src={tech} alt="" className="w-6 h-6" />
-                      </div>
+
+                  {/* Description */}
+                  <p className="text-gray-300 text-base leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-3">
+                    {project.techStack.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="bg-white/10 backdrop-blur-md border border-white/20 px-3 py-2 rounded-md text-xs tracking-wide font-medium uppercase hover:bg-white/20 transition"
+                      >
+                        {tech}
+                      </span>
                     ))}
                   </div>
-                  <p className="">{project.description}</p>
-                </div>
-                <div className="flex gap-2 mt-5">
-                  <a
-                    href={project.github}
-                    target="_blank"
-                    className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition"
-                  >
-                    <FaGithub className="text-2xl text-gray-700 hover:text-black" />
-                  </a>
-
-                  <a
-                    href={project.goLive}
-                    target="_blank"
-                    className="p-2 rounded-lg bg-gray-100 hover:bg-gray-200 transition"
-                  >
-                    <IoIosLink className="text-2xl text-gray-700 hover:text-black" />
-                  </a>
                 </div>
               </div>
-            </motion.div>
-          </div>
-        ))}
-      </div>
+            ))
+          : minorProjects?.map((project) => (
+              <div
+                key={project.id}
+                className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 flex flex-col md:flex-row items-center md:items-start gap-8 shadow-lg"
+              >
+                {/* Left Image */}
+                <div className="w-full md:w-[510px]">
+                  <img
+                    src={project.imageUrl}
+                    alt={project.title}
+                    className="rounded-xl w-[500px] object-cover border border-gray-700"
+                  />
+                </div>
+
+                {/* Right Content */}
+                <div className="w-full md:w-1/2 space-y-5">
+                  {/* Title and Icons */}
+                  <div className="flex justify-between items-center">
+                    <h2 className="text-4xl font-bold">{project.title}</h2>
+                    <div className="flex gap-3">
+                      <a
+                        href={project.projectUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="cursor-pointer bg-white/10 backdrop-blur-md border border-white/20 rounded-full p-3 
+               hover:bg-white/20 hover:-translate-y-1 transition-all duration-300 transform"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="bg-white/10 backdrop-blur-md border border-white/20 rounded-full p-3 
+               hover:bg-white/20 hover:-translate-y-1 transition-all duration-300 transform"
+                      >
+                        <Github size={20} />
+                      </a>
+                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-gray-300 text-base leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-3">
+                    {project.techStack.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="bg-white/10 backdrop-blur-md border border-white/20 px-3 py-2 rounded-md text-xs tracking-wide font-medium uppercase hover:bg-white/20 transition"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+      </motion.div>
     </div>
   );
-}
+};
 
 export default Projects;
