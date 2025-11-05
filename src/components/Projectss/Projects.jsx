@@ -18,7 +18,7 @@ const Projects = () => {
   };
 
   return (
-    <div className=" text-white py-16 px-40" id="projects">
+    <div className=" text-white py-16 lg:px-40 sm:px-10" id="projects">
       {/* Heading */}
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
@@ -71,7 +71,9 @@ const Projects = () => {
                 <div className="w-full md:w-1/2 space-y-5">
                   {/* Title and Icons */}
                   <div className="flex justify-between items-center">
-                    <h2 className="text-4xl font-bold">{project.title}</h2>
+                    <h2 className="lg:text-4xl sm:text-3xl font-bold">
+                      {project.title}
+                    </h2>
                     <div className="flex gap-3">
                       <a
                         href={project.projectUrl}

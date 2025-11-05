@@ -13,7 +13,7 @@ const AboutMe = () => {
         <h2 className="text-4xl font-bold mb-6 ">
           About <span className="">Me</span>
         </h2>
-        <p className="text-lg leading-relaxed mb-10">
+        <p className="lg:text-lg leading-relaxed lg:mb-10 sm:mb-5 sm:mx-3 lg:mx-0">
           A passionate{" "}
           <span className="text-blue-500">Full Stack Developer </span>
           specializing in building responsive and user-friendly web
@@ -29,7 +29,7 @@ const AboutMe = () => {
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 100 }}
           transition={{ duration: 1 }}
-          className="bg-white/10 backdrop-blur-md shadow-md rounded-2xl p-6 text-center"
+          className="bg-white/10 backdrop-blur-md shadow-md rounded-2xl p-6 text-center lg:mx-0  sm:mx-10"
         >
           <Monitor size={40} className="mx-auto text-blue-500 mb-3" />
           <h3 className="font-semibold text-lg mb-2 ">Frontend Focused</h3>
@@ -44,7 +44,7 @@ const AboutMe = () => {
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 100 }}
           transition={{ duration: 1.5 }}
-          className="bg-white/10 backdrop-blur-md shadow-md rounded-2xl p-6 text-center"
+          className="bg-white/10 backdrop-blur-md shadow-md rounded-2xl p-6 text-center lg:mx-0  sm:mx-10"
         >
           <Code size={40} className="mx-auto text-blue-500 mb-3" />
           <h3 className="font-semibold text-lg mb-2 ">Full Stack Skills</h3>
@@ -58,7 +58,7 @@ const AboutMe = () => {
           whileInView={{ opacity: 1, y: 0 }}
           initial={{ opacity: 0, y: 100 }}
           transition={{ duration: 2 }}
-          className="bg-white/10 backdrop-blur-md shadow-md rounded-2xl p-6 text-center"
+          className="bg-white/10 backdrop-blur-md shadow-md rounded-2xl p-6 text-center lg:mx-0 sm:mx-10"
         >
           <Rocket size={40} className="mx-auto text-blue-500 mb-3" />
           <h3 className="font-semibold text-lg mb-2 ">Always Growing</h3>

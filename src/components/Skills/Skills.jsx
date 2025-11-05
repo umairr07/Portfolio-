@@ -23,12 +23,12 @@ const Skills = () => {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 0.8 }}
-        className="  text-white flex flex-wrap justify-center items-center gap-6 px-60"
+        className="  text-white flex flex-wrap justify-center items-center gap-6 lg:px-60"
       >
         {skills.map((skill) => (
           <div
             key={skill.id}
-            className="flex flex-col justify-center items-center bg-zinc-900 hover:bg-zinc-800 transition-all duration-300 w-60 h-24 rounded-xl shadow-md"
+            className="flex flex-col justify-center items-center bg-zinc-900 hover:bg-zinc-800 transition-all duration-300 lg:w-60 lg:h-24 sm:w-40 sm:h-20 rounded-xl shadow-md"
           >
             <img src={skill.img} alt={skill.name} className="h-10 mb-2" />
             <h2 className="text-sm font-medium">{skill.name}</h2>

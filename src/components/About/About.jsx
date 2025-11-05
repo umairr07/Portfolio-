@@ -12,9 +12,9 @@ function About() {
   };
 
   return (
-    <div className="flex py-12" id="about">
-      <div className=" flex lg:pl-36 sm:pl-5 text-gray-300">
-        <div>
+    <div className="flex lg:flex-row sm:flex sm:flex-col lg:py-12" id="about">
+      <div className=" flex lg:pl-36  text-gray-300">
+        <div className="flex flex-col justify-center items-center lg:items-start lg:text-start text-center px-6">
           <motion.h2
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 100 }}
@@ -51,8 +51,15 @@ function About() {
             transition={{ duration: 1 }}
             className="lg:text-xl sm:text-md text-gray-400 mt-4 leading-relaxed "
           >
-            who develops scalable, high-performing web apps that blend <br />{" "}
-            clean code, speed, and great user experience.
+            who develops scalable, high-performing
+          </motion.p>
+          <motion.p
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 100 }}
+            transition={{ duration: 1.2 }}
+            className="lg:text-xl sm:text-md text-gray-400 leading-relaxed "
+          >
+            web apps that blend clean code, speed, and great user experience.
           </motion.p>
 
           <motion.div
@@ -61,7 +68,7 @@ function About() {
             transition={{ duration: 1.2 }}
             className="flex gap-5 mt-8 "
           >
-            <div
+            <a
               className="text-md border border-[#90d4f6] py-2 px-5 cursor-pointer rounded-md 
     transition-all duration-500 ease-in-out
     hover:bg-gradient-to-r hover:from-[#90d4f6] hover:to-[#38bdf8] 
@@ -70,7 +77,7 @@ function About() {
             >
               <MdOutlineDownload size={20} />
               <p>Download CV</p>
-            </div>
+            </a>
 
             <a
               href="#aboutMe"
@@ -90,9 +97,14 @@ function About() {
         whileInView={{ opacity: 1, y: 0 }}
         initial={{ opacity: 0, y: 100 }}
         transition={{ duration: 1 }}
-        className="ml-20 "
+        className="lg:ml-20 sm:ml-10 "
       >
-        <RiCodeSSlashLine size={350} className=" text-[#90d4f6]" />
+        <div className="text-[#90d4f6]">
+          <RiCodeSSlashLine size={275} className="block ml-10 lg:hidden" />{" "}
+          {/* small screens */}
+          <RiCodeSSlashLine size={350} className="hidden lg:block" />{" "}
+          {/* large screens */}
+        </div>
       </motion.div>
     </div>
   );
