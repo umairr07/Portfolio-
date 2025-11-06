@@ -52,7 +52,7 @@ function NavbarComponent() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.3 }}
-            className="md:hidden absolute top-[80px] w-96 bg-white/10 backdrop-blur-md 
+            className="md:hidden absolute top-[80px] w-96 px-20 bg-white/10 backdrop-blur-md 
              border border-white/20 rounded-b-2xl z-50"
           >
             <div className="flex flex-col items-center space-y-5 py-6 text-white">

@@ -35,11 +35,21 @@ const Projects = () => {
         transition={{ duration: 0.8 }}
         className="flex justify-around"
       >
-        <span className="text-xl cursor-pointer" onClick={handleMajorProjects}>
+        <span
+          className={`text-xl cursor-pointer ${
+            majorProjectsState ? "text-blue-400 " : ""
+          }`}
+          onClick={handleMajorProjects}
+        >
           Major Projects
         </span>
         <div className="w-[2px] h-6 bg-gray-400"></div>
-        <span className="text-xl cursor-pointer" onClick={handleMinorProjects}>
+        <span
+          className={`text-xl cursor-pointer ${
+            minorProjectsState ? "text-blue-400 " : ""
+          }`}
+          onClick={handleMinorProjects}
+        >
           Mini Projects
         </span>
       </motion.div>
