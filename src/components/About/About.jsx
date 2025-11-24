@@ -1,6 +1,6 @@
 import uLogo from "../../photos/new-u-logo.png";
 import "./About.css";
-import myResume from "../../assets/Umer_Shaikh_FullStack_Developer..pdf";
+import myResume from "../../assets/Umer_Shaikh_FullStack_Developer.pdf";
 import { motion } from "framer-motion";
 import { MdOutlineDownload } from "react-icons/md";
 import { FaAngleDoubleDown } from "react-icons/fa";

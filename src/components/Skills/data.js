@@ -64,11 +64,11 @@ const skills = [
         name: "Firebase",
         img: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
     },
-    // {
-    //     id: 10,
-    //     name: "Clerk",
-    //     img: "https://clerk.dev/icons/clerk-logo-light.svg",
-    // },
+    {
+        id: 10,
+        name: "Bootstrap",
+        img: "https://clerk.dev/icons/clerk-logo-light.svg",
+    },
     {
         id: 11,
         name: "Java",
